@@ -98,11 +98,11 @@ public class Function1
                 resized.SaveAsPng(output);
                 output.Position = 0;
 
-                // BLOBコンテナーにアップロードするファイル名を生成
-                // 形式: {PDF名}/page-{ページ番号:4桁}.png
+                // BLOBコンテナーにアップロードするPNG画像のファイル名を生成
+                // 形式: {PDFファイル名}/page-{ページ番号:4桁}.png
                 var blobName = $"{sourceName}/page-{pageNumber:D4}.png";
 
-                // BLOBコンテナーにアップロード
+                // BLOBコンテナーにPNG画像をアップロード
                 await blobContainerClient.UploadBlobAsync(blobName, output, cancellationToken);
 
                 successCount++;
