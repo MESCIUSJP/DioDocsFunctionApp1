@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "DioDocsFunctionApp1": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7252",
+      "launchBrowser": false
+    }
+  }
+}
